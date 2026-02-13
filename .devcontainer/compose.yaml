@@ -9,14 +9,14 @@ services:
     volumes:
     - ../../store:/workspaces/store:cached
 
-    # Overrides default command so things don't shut down after the process ends.
+    # プロセス終了後にシャットダウンしないようにデフォルトコマンドを上書きします。
     command: sleep infinity
 
-    # Uncomment the next line to use a non-root user for all processes.
+    # すべてのプロセスで非rootユーザーを使用する場合は、次の行をコメント解除してください。
     # user: vscode
 
-    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+    # アプリのポートをローカルに転送するには、**devcontainer.json** の "forwardPorts" を使用してください。
+    # (このファイルに "ports" プロパティを追加しても、Codespaceからは転送されません。)
     depends_on:
     - selenium
 

@@ -1,12 +1,12 @@
-// For format details, see https://containers.dev/implementors/json_reference/.
-// For config options, see the README at: https://github.com/devcontainers/templates/tree/main/src/ruby
+// フォーマットの詳細については、https://containers.dev/implementors/json_reference/ を参照してください。
+// 設定オプションについては、次のREADMEを参照してください: https://github.com/devcontainers/templates/tree/main/src/ruby
 {
   "name": "store",
   "dockerComposeFile": "compose.yaml",
   "service": "rails-app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-  // Features to add to the dev container. More info: https://containers.dev/features.
+  // 開発コンテナに追加する機能。詳細情報: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/rails/devcontainer/features/activestorage": {},
@@ -20,16 +20,16 @@
     "KAMAL_REGISTRY_PASSWORD": "$KAMAL_REGISTRY_PASSWORD"
   },
 
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // コンテナ内のポートをローカルで利用可能にするには 'forwardPorts' を使用します。
   "forwardPorts": [3000],
 
-  // Configure tool-specific properties.
+  // ツール固有のプロパティを設定します。
   // "customizations": {},
 
-  // Uncomment to connect as root instead. More info: https://containers.dev/implementors/json_reference/#remoteUser.
+  // rootとして接続する場合はコメントを解除してください。詳細情報: https://containers.dev/implementors/json_reference/#remoteUser.
   // "remoteUser": "root",
 
 
-  // Use 'postCreateCommand' to run commands after the container is created.
+  // コンテナ作成後にコマンドを実行するには 'postCreateCommand' を使用します。
   "postCreateCommand": "bin/setup --skip-server"
 }
